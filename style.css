@@ -2,6 +2,7 @@
   /* border: 1px solid black; */
   margin: 0px;
   padding: 0px;
+  font-family: sans-serif;
 }
 
 body {
@@ -13,7 +14,7 @@ body {
 form {
   display: flex;
   flex-direction: column;
-  align-content: center;
+  align-items: center;
   padding-top: 15%;
 }
 
@@ -21,14 +22,24 @@ form {
   margin: 8px;
 }
 
-input {
+input,
+select {
   border-radius: 8px;
   border: 1px solid black;
   padding: 4px;
+}
+
+input:focus,
+select:focus {
+  outline: none;
 }
 
 button {
   border-radius: 8px;
   border: 1px solid black;
   padding: 8px 4px;
+}
+
+input:not(:focus):invalid {
+  border: 1px solid red;
 }
